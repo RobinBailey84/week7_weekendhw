@@ -1,3 +1,23 @@
 #main-canvas {
   border: 1px solid black
 }
+
+body {
+  background-color: lightgrey;
+  text-align: center;
+  font-family: sans-serif;
+  background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX4409101.jpg');
+  /* background-repeat: no-repeat; */
+  background-size: 100%;
+  
+}
+
+img {
+  height: 200px;
+  width: 100px;
+  margin: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
