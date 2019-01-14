@@ -8,8 +8,8 @@ const BeerListView = function(container){
 
 BeerListView.prototype.bindEvents = function(){
   PubSub.subscribe('Beers:selected-beer', (event) => {
-    console.log(event.detail);
-    this.render(event.detail)
+    // console.log(event.detail);
+    this.renderOneBeer(event.detail)
     console.log(event.detail);
   })
 
@@ -22,12 +22,19 @@ BeerListView.prototype.bindEvents = function(){
 BeerListView.prototype.render = function(beers){
   this.container.innerHTML = '';
   beers.forEach((beer) => {
-    // console.log(beer);
+
     const beerDetail = new BeerDetailView();
     const beerDiv = beerDetail.createBeerDetail(beer);
     this.container.appendChild(beerDiv);
-    // console.log(beerDiv);
+
   })
+}
+
+BeerListView.prototype.renderOneBeer = function(beer){
+  this.container.innerHTML = '';
+  const beerDetail = new BeerDetailView();
+  const beerDiv = beerDetail.createBeerDetail(beer);
+  this.container.appendChild(beerDiv);
 }
 
 module.exports = BeerListView;

@@ -12,7 +12,7 @@ Beers.prototype.bindEvents = function(){
     console.log(event.detail);
     const foundBeer = this.findBeer(selectedBeer)
     PubSub.publish('Beers:selected-beer', foundBeer)
-    console.log(foundBeer);
+    // console.log(foundBeer);
   })
 
 
@@ -29,12 +29,6 @@ Beers.prototype.getData = function(){
 
 Beers.prototype.findBeer = function(index){
   return this.beers[index];
-//   const foundBeer = this.beers.filter((beer) => {
-//     return beer.detail === searchBeer;
-//   })
-//   return foundBeer;
-// console.log(foundBeer);
-
 }
 
 module.exports = Beers;
